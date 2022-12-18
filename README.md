@@ -1,9 +1,25 @@
-# QRCode-enhanced.js
+# QRCode2.js / QRCode-enhanced.js
 QRCode.js is javascript library for making QRCode. QRCode.js supports Cross-browser with HTML5 Canvas and table tag in DOM. QRCode.js has no dependencies.
 
 QRCode-enhanced.js is a javascript plugin that modifies the behaviour of QRCode.js as a black box, such that the output will always be pixel-perfect, with no smeared edges, irregular pixel sizes, etc.
 
-## Basic Usages
+QRCode2.js is a javascript library that does the same as QRCode.js and QRCode-enhanced.js and even more, only that the function calls remains the same.
+
+## Recommended New Usages (QRCode2.js)
+
+Replace qrcode.js / qrcode.min.js with qrcode2.js.
+
+Parameter "multiplier" can be used to define image size as multiples to the size (in pixels) of the QR Code.
+
+Default: 4
+
+Parameter "applyCSS" can be used to disable or enable applying of CSS which ensures sharp rendering of QR Code (no antialiasing) in the case of width and height both coincidentally being multiples of the QR Code size, or that an integer multiplier has been used.
+
+Default: true
+
+Parameter "useSVG" now generates pixel-perfect QR Codes with no seams. This cannot be turned off. (why would you...)
+
+## Basic Usages (legacy QRCode-enhanced.js)
 
 Add qrcode-enhanced.js right below qrcode.js
 
@@ -71,6 +87,8 @@ Add the following CSS code to disable antialiased zoom in
 QRCode.js originally works on: IE6~10, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.
 
 QRCode-enhanced.js works on: [testing is still required]
+
+QRCode2.js SHOULD work on: IE6~10, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.
 
 ## License
 MIT License
