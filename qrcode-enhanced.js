@@ -13,6 +13,12 @@ function QRCodeEnhanced(q1, q2) {
     // let it draw to get module size. 
     // if q2 is string, no problem. if q2 is dict, no problem. 
     var qrcode = new QRCode(q1, q2);
+	if (typeof q2 == "string") {} else {
+		if (!q2.text){
+		
+		return qrcode
+		}
+	}
 	console.log(qrcode);
     // get best dimensions from internal structure. 
     best_dimensions = qrcode._oQRCode.getModuleCount();

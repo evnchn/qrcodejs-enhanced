@@ -5,27 +5,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 <script type="text/javascript" src="jquery.min.js"></script>
-<style>#qrcode { 
-    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-    image-rendering: -moz-crisp-edges;          /* Firefox                        */
-    image-rendering: -o-crisp-edges;            /* Opera                          */
-    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    image-rendering: pixelated;                 /* Universal support since 2021   */
-    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-
-}</style>
+<script type="text/javascript" src="qrcode.js"></script>
+<script type="text/javascript" src="qrcode-enhanced.js"></script>
 </head>
 <body>
-<input id="text" type="text" value="Placeholder" style="width:80%" /><br />
+<input id="text" type="text" value="http://jindo.dev.naver.com/collie" style="width:80%" /><br />
 <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="text/javascript" src="qrcode-enhanced.js"></script>
+
 <script type="text/javascript">
 var qrcode = QRCodeEnhanced(document.getElementById("qrcode"), {
-	width : 50,
-	height : 50, 
-	text: "Placeholder"
+	width : 100,
+	height : 100
 });
 
 function makeCode () {		
@@ -50,6 +40,6 @@ $("#text").
 		if (e.keyCode == 13) {
 			makeCode();
 		}
-});
+	});
 </script>
 </body>
