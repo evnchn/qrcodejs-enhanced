@@ -506,7 +506,7 @@ Small Device Styles
   }
 
 }</style>
-    <title>qrcode-enhanced.js</title>
+    <title>qrcode2.js</title>
   </head>
 
   <body>
@@ -516,26 +516,37 @@ Small Device Styles
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/evnchn/qrcodejs-enhanced">View on GitHub</a>
 
-          <h1 id="project_title">qrcode-enhanced.js</h1>
+          <h1 id="project_title">QRCode2.js / QRCode-enhanced.js</h1>
           <h2 id="project_tagline">Cross-browser QRCode generator for javascript, <br>enhanced with pixel-perfectness in mind. </h2>
-
+			<!--
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/evnchn/qrcodejs-enhanced">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/evnchn/qrcodejs-enhanced">Download this project as a tar.gz file</a>
             </section>
+			-->
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>QRCode-enhanced.js</h1>
+        <h1>QRCode2.js / QRCode-enhanced.js</h1>
 
 <p>QRCode.js is javascript library for making QRCode. QRCode.js supports Cross-browser with HTML5 Canvas and table tag in DOM.
 QRCode.js has no dependencies.</p>
 <p>QRCode-enhanced.js is a javascript plugin that modifies the behaviour of QRCode.js as a black box, such that the output will always be pixel-perfect, with no smeared edges, irregular pixel sizes, etc. </p>
+<p>QRCode2.js is a javascript library that does the same as QRCode.js and QRCode-enhanced.js and even more, only that the function calls remains the same. </p>
 
-<h2>Basic Usages</h2>
+<h2>Recommended New Usages (QRCode2.js)</h2>
+
+<p>Replace qrcode.js / qrcode.min.js with qrcode2.js.</p>
+
+<p>Parameter "multiplier" can be used to define image size as multiples to the size (in pixels) of the QR Code. <br>Default: 4</p>
+<p>Parameter "applyCSS" can be used to disable or enable applying of CSS which ensures sharp rendering of QR Code (no antialiasing) in the case of width and height both coincidentally being multiples of the QR Code size, or that an integer multiplier has been used. <br>Default: true</p>
+
+<p>Parameter "useSVG" now generates pixel-perfect QR Codes with no seams. This cannot be turned off. (why would you...)</p>
+
+<h2>Basic Usages (legacy QRCode-enhanced.js)</h2>
 
 <p>Add qrcode-enhanced.js right below qrcode.js</p>
 <p style="color:red">qrcode.min.js does NOT work (yet)...</p>
@@ -589,13 +600,14 @@ qrcode.makeCodeEnhanced("http://naver.com"); // new way to make another code.
 
 }</code></pre>
 <h2>Sample Code</h2>
-<p>Observe as the image gets bigger with more text being input (press Enter to generate)</p>
+<p>Observe as the image gets bigger with more text being input.</p>
 <iframe src="testpage.html" width="100%"></iframe>
 
 <h2>Browser Compatibility</h2>
 
 <p>QRCode.js originally works on: IE6~10, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.</p>
 <p>QRCode-enhanced.js works on: [testing is still required]</p>
+<p>QRCode2.js SHOULD work on: IE6~10, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.</p>
 <h2>License</h2>
 
 <p>MIT License</p>
@@ -604,14 +616,14 @@ qrcode.makeCodeEnhanced("http://naver.com"); // new way to make another code.
 <p>Original developer</p>
 <p>twitter <a href="https://github.com/davidshimjs" class="user-mention">@davidshimjs</a></p>
 <p>Patch developer</p>
-<p>Github: @evnchn</p>
+<p>Github: <a href="https://github.com/evnchn" class="user-mention">@evnchn</a></p></p>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">qrcode.js maintained by <a href="https://github.com/davidshimjs">davidshimjs</a></p>
+        <p class="copyright">qrcode2.js / qrcode-enhanced.js maintained by <a href="https://github.com/evnchn">evnchn</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
