@@ -569,7 +569,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 				this._htOption[i] = vOption[i];
 			}
 		}
-		
+		if (this._htOption.width && this._htOption.height) {
+			this._htOption.multiplier = 0;
+			
+		}
 		if (typeof el == "string") {
 			el = document.getElementById(el);
 		}

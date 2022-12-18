@@ -9,10 +9,16 @@
 </head>
 <body>
 <input id="text" type="text" value="https://github.com/evnchn" style="width:80%" /><br />
-<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+<div id="qrcode" style="width:100px; height:100px; margin-top:15px;float: left;"></div>
+<div id="qrcode2" style="width:100px; height:100px; margin-top:15px;float: right;"></div>
 
 <script type="text/javascript">
 var qrcode = new QRCode(document.getElementById("qrcode"), {
+});
+var qrcode2 = new QRCode(document.getElementById("qrcode2"), {
+	width: 100, 
+	height: 100,
+	multiplier: 0
 });
 
 function makeCode () {		
@@ -25,6 +31,7 @@ function makeCode () {
 	}
 	
 	qrcode.makeCode(elText.value);
+	qrcode2.makeCode(elText.value);
 }
 
 makeCode();
@@ -38,5 +45,9 @@ $("#text").
 			makeCode();
 		}
 	});
+	
+
+
+
 </script>
 </body>
